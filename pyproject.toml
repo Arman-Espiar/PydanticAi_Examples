@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydantic-ai-examples"
+version = "0.1.0"
+description = "نمونه‌های استفاده از PydanticAI با Ollama"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pydantic-ai",
+    "httpx",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "ruff",
+]
+
+[tool.setuptools]
+py-modules = [
+    "agent_creator_ollama",
+    "ollama_models_enum",
+    "ollama_models_static",
+    "generate_static_enum",
+    "main_template"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["examples"]
+exclude = [".venv*", "tests*", "__pycache__"]
