@@ -70,15 +70,3 @@ deactivate
   - OPEN_API_KEY="..."
 
 ---
-
-## Run
-
-```bash
-python .\app.py
-```
-
-```bash
-python .\learn.py
-```
-
----
